@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#880011">
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="footer" />
+
+    <com.kari.widget.refresh.RefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_height="wrap_content"
+        android:background="#ffff22">
+
+        <com.kari.widget.refresh.SimpleHeaderView
+            app:rl_role="header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#abc"
+            app:rl_role="content" />
+
+    </com.kari.widget.refresh.RefreshLayout>
+
+
+</RelativeLayout>
